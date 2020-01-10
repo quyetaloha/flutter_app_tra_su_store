@@ -13,7 +13,7 @@ class AppBarHome extends StatelessWidget with PreferredSizeWidget{
     var homeListView=Provider.of<HomeListItem>(context);
     var cart=Provider.of<Cart>(context);
     return AppBar(
-      backgroundColor: Colors.black87,
+      backgroundColor: Colors.teal,
       title: Text("MT Store"),
       actions: <Widget>[
         PopupMenuButton(
@@ -29,10 +29,18 @@ class AppBarHome extends StatelessWidget with PreferredSizeWidget{
           icon: Icon(Icons.keyboard_arrow_down),
           itemBuilder: (BuildContext context) => [
             PopupMenuItem(
+              textStyle:new TextStyle(
+                color: Colors.teal,
+                fontWeight: FontWeight.bold,
+              ),
               child: Text("SP đang theo dõi"),
               value: 1,
             ),
             PopupMenuItem(
+              textStyle:new TextStyle(
+                color: Colors.teal,
+                fontWeight: FontWeight.bold,
+              ),
               child: Text("Tất cả"),
               value: 2,
             ),
