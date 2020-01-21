@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
             value: Items()
         ),
         ChangeNotifierProvider.value(
-            value: HomeListItem(false)
+            value: HomeListItem(isShowFavourite:false)
         ),
 //        ChangeNotifierProvider.value(
 //            value: ItemCard(item:null),
@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
           DetailItem.routeName: (context) => DetailItem(),
           CartScreen.routeName: (context) => CartScreen(),
         },
-        home: HomeListItem(false),
+        home: HomeListItem(isShowFavourite:false),
       ),
     );
   }
